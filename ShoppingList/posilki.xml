@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<posilki>
+    <posilek id="1" nazwa="Spagetti">
+        <skladnik artykul="Makaron spagetti" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Mięso mielone" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Przecier pomidorowy" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Ser żółty" ilosc="50.0" jednostka="g"/>
+    </posilek>
+    <posilek id="2" nazwa="Pizza">
+        <skladnik artykul="Mąka przenna" ilosc="400.0" jednostka="g"/>
+        <skladnik artykul="Drożdze" ilosc="30.0" jednostka="g"/>
+        <skladnik artykul="Mleko" ilosc="150.0" jednostka="g"/>
+        <skladnik artykul="Woda" ilosc="150.0" jednostka="g"/>
+        <skladnik artykul="Olej rzepakowy" ilosc="20.0" jednostka="g"/>
+        <skladnik artykul="Ser żółty" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Pieczarki" ilosc="250.0" jednostka="g"/>
+        <skladnik artykul="Szynka" ilosc="50.0" jednostka="g"/>
+        <skladnik artykul="Kukurydza" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Przecier pomidorowy" ilosc="200.0" jednostka="g"/>
+    </posilek>
+    <posilek id="3" nazwa="Karminadle">
+        <skladnik artykul="Bułka Tarta" ilosc="50.0" jednostka="g"/>
+        <skladnik artykul="Mięso mielone" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Bułka" ilosc="100.0" jednostka="g"/>
+        <skladnik artykul="Jajko" ilosc="2.0" jednostka="szt."/>
+    </posilek>
+    <posilek id="4" nazwa="Test 2"/>
+    <posilek id="5" nazwa="zzz"/>
+</posilki>

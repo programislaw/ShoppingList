@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf14708117841560" configfile="/ShoppingList/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="listaposilkow.xhtml" id="pf14730674841270" referenceLink="//@navigationRule.0/@fromViewId|" outlinks="pf14730674841271 pf14730674841272" path="/listaposilkow.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="posilekedt.xhtml" id="pf14730674841273" referenceLink="//@navigationRule.3/@fromViewId|" outlinks="pf14730674841274 pf14730674841275" inlinks="pf14730674841271" path="/posilekedt.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="skladnik.xhtml" id="pf14730674841276" referenceLink="//@navigationRule.2/@navigationCase.0/@toViewId|" inlinks="pf14730674841274" path="/skladnik.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="skladnikedt.xhtml" id="pf14730674841277" referenceLink="//@navigationRule.3/@navigationCase.0/@toViewId|" inlinks="pf14730674841275" path="/skladnikedt.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="posilek.xhtml" id="pf14730674841278" referenceLink="//@navigationRule.0/@navigationCase.0/@toViewId|" inlinks="pf14730674841272" path="/posilek.xhtml"/>
+  <links id="pf14730674841271" target="pf14730674841273" source="pf14730674841270" outcome="toposilekedt"/>
+  <links id="pf14730674841274" target="pf14730674841276" source="pf14730674841273" outcome="toskladnik"/>
+  <links id="pf14730674841275" target="pf14730674841277" source="pf14730674841273" outcome="toskladnikedt"/>
+  <links id="pf14730674841272" target="pf14730674841278" source="pf14730674841270" outcome="toposilek"/>
+</pageflow:Pageflow>

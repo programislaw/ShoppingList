@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sbak="http://sbak.com/facelets"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="template/common.xhtml">
+		<ui:define name="content">
+			<div class="container">
+
+				<div class="page-header">
+					<h2>Składnik - podgląd</h2>
+				</div>
+
+				<f:view>
+					<h:messages layout="table"></h:messages>
+					<h:form styleClass="navbar-form navbar-left">
+
+						<div class="row">
+							<div class="col-md-4">
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="Nazwa" styleClass=""></h:outputText>
+								</h:panelGrid>
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="#{posilkiController.skladnik.artykul}"
+										styleClass=""></h:outputText>
+								</h:panelGrid>
+							</div>
+							<div class="col-md-4">
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="Ilość" styleClass=""></h:outputText>
+								</h:panelGrid>
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="#{posilkiController.skladnik.ilosc}"
+										styleClass=""></h:outputText>
+								</h:panelGrid>
+							</div>
+							<div class="col-md-4">
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="Jednostka" styleClass=""></h:outputText>
+								</h:panelGrid>
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="#{posilkiController.skladnik.jednostka}"
+										styleClass=""></h:outputText>
+								</h:panelGrid>
+							</div>
+						</div>
+						<h:commandLink value="Powrót" action="posilek"
+							styleClass="btn btn-xs btn-primary" />
+					</h:form>
+				</f:view>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

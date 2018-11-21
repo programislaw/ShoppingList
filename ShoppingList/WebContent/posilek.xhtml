@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sbak="http://sbak.com/facelets"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="template/common.xhtml">
+		<ui:define name="content">
+
+			<div class="container">
+
+				<div class="page-header">
+					<h2>Posiłek - podgląd</h2>
+				</div>
+
+				<f:view>
+					<h:messages layout="table"></h:messages>
+					<h:form styleClass="navbar-form navbar-left">
+
+						<h:panelGrid columns="1" styleClass="form-group">
+							<h:outputText value="Nazwa" styleClass=""></h:outputText>
+						</h:panelGrid>
+
+						<h:panelGrid columns="1" styleClass="form-group">
+							<h:inputText value="#{posilkiController.posilek.nazwa}"
+								required="true" requiredMessage="Nazwa jest wymagana"
+								styleClass="form-control">
+							</h:inputText>
+						</h:panelGrid>
+
+						<div class="table-responsive">
+							<h:dataTable value="#{posilkiController.posilek.skladniki}"
+								var="element" styleClass="table table-striped" headerClass=""
+								columnClasses="col-md-8, col-md-2">
+								<h:column>
+									<f:facet name="header">
+										<h:column>
+											<h:outputText value="Artykul"></h:outputText>
+										</h:column>
+									</f:facet>
+									<h:outputText value="#{element.artykul}"></h:outputText>
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:column>
+											<h:outputText value="Ilosc"></h:outputText>
+										</h:column>
+									</f:facet>
+									<h:outputText value="#{element.ilosc}"></h:outputText>
+								</h:column>
+								<h:column>
+									<f:facet name="header">
+										<h:column>
+											<h:outputText value="Jednostka"></h:outputText>
+										</h:column>
+									</f:facet>
+									<h:outputText value="#{element.jednostka}"></h:outputText>
+								</h:column>
+							</h:dataTable>
+						</div>
+						<sbak:bottombutton powrot="listaposilkow" powrotLabel="Powrót"
+							zapisz="listaposilkow" zapiszLabel="Zapisz" />
+					</h:form>
+				</f:view>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

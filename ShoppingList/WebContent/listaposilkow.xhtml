@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sbak="http://sbak.com/facelets"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="template/common.xhtml">
+		<ui:define name="content">
+
+
+
+			<div class="container">
+
+				<div class="page-header">
+					<h2>Lista</h2>
+				</div>
+
+				<f:view>
+					<h:messages layout="table"></h:messages>
+					<h:form>
+						<div class="table-responsive">
+							<h:commandLink class="btn btn-sm btn-success" value="dodaj"
+								action="#{posilkiController.dodajPosilek()}" />
+							<h:dataTable value="#{posilkiController.listaposilkow}"
+								var="element" styleClass="table table-striped" headerClass=""
+								columnClasses="first, rest">
+								<h:column>
+									<f:facet name="header">
+										<h:column>
+											<h:outputText value="Nazwa"></h:outputText>
+										</h:column>
+									</f:facet>
+									<h:outputText value="#{element.nazwa}"></h:outputText>
+								</h:column>
+
+								<h:column>
+									<f:facet name="header">
+										<h:column>
+											<h:outputText value="Actions"></h:outputText>
+										</h:column>
+									</f:facet>
+									<h:panelGrid columns="2">
+										<h:commandLink value="edytuj"
+											action="#{posilkiController.edytujPosilek(element)}">
+											<f:setPropertyActionListener
+												target="#{posilkiController.posilek}" value="#{element}" />
+										</h:commandLink>
+									</h:panelGrid>
+									<h:panelGrid columns="2">
+										<h:commandLink value="szczegoly"
+											action="#{posilkiController.szczegolyPosilku(element)}">
+											<f:setPropertyActionListener
+												target="#{posilkiController.posilek}" value="#{element}" />
+										</h:commandLink>
+									</h:panelGrid>
+									<h:panelGrid columns="2">
+										<h:commandLink value="usun"
+											action="#{posilkiController.usunPosilek(element)}">
+											<f:setPropertyActionListener
+												target="#{posilkiController.posilek}" value="#{element}" />
+										</h:commandLink>
+									</h:panelGrid>
+								</h:column>
+							</h:dataTable>
+
+						</div>
+					</h:form>
+				</f:view>
+			</div>
+
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:sbak="http://sbak.com/facelets"
+	xmlns:ui="http://java.sun.com/jsf/facelets">
+
+<h:body>
+	<ui:composition template="template/common.xhtml">
+		<ui:define name="content">
+
+			<div class="container">
+
+				<div class="page-header">
+					<h2>Składnik - edycja</h2>
+				</div>
+
+				<f:view>
+					<h:messages layout="table"></h:messages>
+					<h:form styleClass="navbar-form navbar-left">
+
+						<div class="row">
+							<div class="col-md-4">
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="Nazwa" styleClass=""></h:outputText>
+								</h:panelGrid>
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:inputText value="#{posilkiController.skladnik.artykul}"
+										required="true" requiredMessage="Nazwa jest wymagana"
+										styleClass="form-control">
+									</h:inputText>
+								</h:panelGrid>
+							</div>
+							<div class="col-md-4">
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="Ilość" styleClass=""></h:outputText>
+								</h:panelGrid>
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:inputText value="#{posilkiController.skladnik.ilosc}"
+										required="true" requiredMessage="Ilość jest wymagana"
+										styleClass="form-control">
+									</h:inputText>
+								</h:panelGrid>
+							</div>
+							<div class="col-md-4">
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:outputText value="Jednostka" styleClass=""></h:outputText>
+								</h:panelGrid>
+								<h:panelGrid columns="1" styleClass="form-group">
+									<h:inputText value="#{posilkiController.skladnik.jednostka}"
+										required="true" requiredMessage="Jednostka jest wymagana"
+										styleClass="form-control">
+									</h:inputText>
+								</h:panelGrid>
+							</div>
+						</div>
+						<h:commandLink value="Powrót" action="posilekedt"
+							styleClass="btn btn-sm btn-primary" />
+						<h:commandLink value="Zapisz"
+							action="#{posilkiController.zapiszSkladnik()}"
+							styleClass="btn btn-sm btn-success" />
+					</h:form>
+				</f:view>
+			</div>
+		</ui:define>
+	</ui:composition>
+</h:body>
+</html>

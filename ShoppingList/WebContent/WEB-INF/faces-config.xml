@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config
+    xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd"
+    version="2.2">
+    
+<!--     Nawigacje -->
+<!-- Posiłki -->
+	<navigation-rule>
+		<from-view-id>/listaposilkow.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>toposilek</from-outcome><to-view-id>/posilek.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/listaposilkow.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>toposilekedt</from-outcome><to-view-id>/posilekedt.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+<!-- 	Składniki -->
+	<navigation-rule>
+		<from-view-id>/posilekedt.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>toskladnik</from-outcome><to-view-id>/skladnik.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	<navigation-rule>
+		<from-view-id>/posilekedt.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>toskladnikedt</from-outcome><to-view-id>/skladnikedt.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+
+<!-- 	<navigation-rule> -->
+<!-- 		<from-view-id>/posilekedt.jsp</from-view-id> -->
+<!-- 		<navigation-case> -->
+<!-- 			<from-outcome>topowrot</from-outcome><to-view-id>/listaposilkow.jsp</to-view-id> -->
+<!-- 		</navigation-case> -->
+<!-- 	</navigation-rule> -->
+<!-- 	<navigation-rule> -->
+<!-- 		<from-view-id>/posilek.jsp</from-view-id> -->
+<!-- 		<navigation-case> -->
+<!-- 			<from-outcome>topowrot</from-outcome><to-view-id>/listaposilkow.jsp</to-view-id> -->
+<!-- 		</navigation-case> -->
+<!-- 	</navigation-rule> -->
+<!-- 	<navigation-rule> -->
+<!-- 		<from-view-id>/skladnikedt.jsp</from-view-id> -->
+<!-- 		<navigation-case> -->
+<!-- 			<from-outcome>topowrot</from-outcome><to-view-id>/posilekedt.jsp</to-view-id> -->
+<!-- 		</navigation-case> -->
+<!-- 	</navigation-rule> -->
+	<!-- 	Bean -->
+<!-- Kontroler posiłków -->
+	<managed-bean>
+		<managed-bean-name>posilkiController</managed-bean-name>
+		<managed-bean-class>pl.com.sbak.PosilkiController</managed-bean-class>
+		<managed-bean-scope>session</managed-bean-scope>
+	</managed-bean>
+</faces-config>
